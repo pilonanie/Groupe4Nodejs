@@ -1,6 +1,6 @@
 const db = require ('./db');
 
-function addPersonne(prenom, nom, login, pwd){
+function addEtudiant(id, matricule, prenom, nom, filiere, niveau){
     const sql = 'insert into Personne (prenom, nom, login, pwd) values (?,?,?,?)';
     db.query(sql,[prenom, nom, login, pwd],(err,result)=>{
 
